@@ -2,7 +2,8 @@ class CoffeeMachine:
     amount_of_ingredients = [400, 540, 120, 9, 550]
 
     def buy(self):
-        coffee = input("\nWhat do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:\n")
+        coffee = input("\nWhat do you want to buy? 1 - espresso, 2 - latte, "
+                       "3 - cappuccino, back - to main menu:\n")
 
         if coffee == '1':
             self.making_coffee(250, 0, 16, 1, 4)
@@ -14,12 +15,17 @@ class CoffeeMachine:
             return
 
     def fill(self):
-        how_much_water = int(input('\nWrite how many ml of water you want to add:\n'))
-        how_much_milk = int(input('Write how many ml of milk you want to add:\n'))
-        how_many_beans = int(input('Write how many grams of coffee beans you want to add:\n'))
-        how_many_cups = int(input('Write how many disposable coffee cups you want to add:\n'))
+        how_much_water = int(input('\nWrite how many ml of '
+                                   'water you want to add:\n'))
+        how_much_milk = int(input('Write how many ml of '
+                                  'milk you want to add:\n'))
+        how_many_beans = int(input('Write how many grams of '
+                                   'coffee beans you want to add:\n'))
+        how_many_cups = int(input('Write how many disposable '
+                                  'coffee cups you want to add:\n'))
 
-        list_of_ingredients = [how_much_water, how_much_milk, how_many_beans, how_many_cups]
+        list_of_ingredients = [how_much_water, how_much_milk,
+                               how_many_beans, how_many_cups]
 
         for i in range(4):
             self.amount_of_ingredients[i] += list_of_ingredients[i]
